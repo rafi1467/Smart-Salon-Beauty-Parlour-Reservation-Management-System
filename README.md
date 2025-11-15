@@ -1,59 +1,53 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Smart Salon & Beauty Parlour Reservation & Management System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Project Description
+The "Smart Salon & Beauty Parlour Reservation & Management System" is a comprehensive, AI-powered platform designed to revolutionize the beauty and wellness industry. It streamlines the entire business operation for salon owners while providing a personalized and seamless experience for customers.
 
-## About Laravel
+The system goes beyond traditional booking software by integrating Artificial Intelligence to offer personalized style and beauty recommendations. For customers, it provides an intuitive mobile and web interface to discover services, book appointments with preferred stylists, receive AI-driven suggestions, and manage their beauty profiles. For salon administrators and staff, it offers a powerful dashboard to manage appointments, inventory, staff schedules, customer relationships, and business analytics, all in one place. The core innovation lies in leveraging AI to bridge the gap between customer desires and expert services, making every visit highly personalized and efficient.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Team & Task Distribution
+| Team Member | Role / Primary Focus | Assigned Functional Requirements (FRs) |
+|---|---|---|
+| Riajul Haque Rafi<br>(0242220005101467) | Customer Facing & UI/UX Specialist (Web) | FR-1, FR-2, FR-21, FR-7 |
+| Samiul Hasan Sakib<br>(0242220005101472) | Backend & AI Integration Specialist | FR-17, FR-18, FR-22, FR-3, FR-14 |
+| Md. Rifat Hossain Shan<br>(0242220005101477) | Booking & Notification System Engineer | FR-3, FR-8, FR-19, FR-6 |
+| Mimtaj Hossain Sami<br>(0242220005101457) | Admin & Business Logic Developer | FR-9, FR-10, FR-11, FR-12, FR-16 |
+| Anik Kumar Kuri<br>(0242220005101077) | Mobile App & Customer Loyalty Developer | FR-4, FR-5, FR-15, FR-20 |
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Features
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### For Customers:
+*   User Registration & Profiles: Secure sign-up and personalized beauty profiles.
+*   AI-Powered Beauty Assistant: Chatbot for style recommendations and service queries.
+*   Smart Service Discovery: Browse services, view stylist portfolios, and read reviews.
+*   Intelligent Booking System: Easy appointment scheduling with real-time availability.
+*   Personalized Dashboard: Manage appointments, view history, and save favorite styles.
+*   Push & Email Notifications: Reminders for upcoming appointments and exclusive offers.
+*   Mobile App: Full booking functionality on the go.
 
-## Learning Laravel
+### For Staff & Stylists:
+*   Staff Dashboard: View personal schedule, manage customer appointments, and update service status.
+*   Customer Management: Access customer history and preferences before appointments.
+*   Performance Analytics: Track personal performance and commissions.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+### For Administrators:
+*   Comprehensive Dashboard: Overview of business performance, revenue, and key metrics.
+*   Staff Management: Add/edit staff, manage roles, and set schedules.
+*   Service & Inventory Management: Update service menu, prices, and track product inventory.
+*   Appointment Oversight: Monitor all bookings, resolve conflicts, and manage the calendar.
+*   Advanced Reporting: Generate detailed reports on sales, customer trends, and staff performance.
+*   Marketing Tools: Create and send promotional offers to customer segments.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Installation & Setup Guide
 
-## Laravel Sponsors
+### Prerequisites:
+*   Node.js (v16 or above) and npm / Python (v3.8 or above) and pip
+*   MongoDB (v4.4 or above) / PostgreSQL (v12 or above)
+*   Git
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### Steps:
 
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+#### Clone the Repository:
+```bash
+git clone https://github.com/your-username/smartsalon-system.git
+cd smartsalon-system
