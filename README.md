@@ -6,13 +6,13 @@ The "Smart Salon & Beauty Parlour Reservation & Management System" is a comprehe
 The system goes beyond traditional booking software by integrating Artificial Intelligence to offer personalized style and beauty recommendations. For customers, it provides an intuitive mobile and web interface to discover services, book appointments with preferred stylists, receive AI-driven suggestions, and manage their beauty profiles. For salon administrators and staff, it offers a powerful dashboard to manage appointments, inventory, staff schedules, customer relationships, and business analytics, all in one place. The core innovation lies in leveraging AI to bridge the gap between customer desires and expert services, making every visit highly personalized and efficient.
 
 ## Team & Task Distribution
-| Team Member | Role / Primary Focus | Assigned Functional Requirements (FRs) |
+| Team Member Name | Team Member ID | Assigned Functional Requirements (FRs) |
 |---|---|---|
-| Riajul Haque Rafi<br>(0242220005101467) | Customer Facing & UI/UX Specialist (Web) | FR-1, FR-2, FR-21, FR-7 |
-| Samiul Hasan Sakib<br>(0242220005101472) | Backend & AI Integration Specialist | FR-17, FR-18, FR-22, FR-3, FR-14 |
-| Md. Rifat Hossain Shan<br>(0242220005101477) | Booking & Notification System Engineer | FR-3, FR-8, FR-19, FR-6 |
-| Mimtaj Hossain Sami<br>(0242220005101457) | Admin & Business Logic Developer | FR-9, FR-10, FR-11, FR-12, FR-16 |
-| Anik Kumar Kuri<br>(0242220005101077) | Mobile App & Customer Loyalty Developer | FR-4, FR-5, FR-15, FR-20 |
+| Riajul Haque Rafi | 0242220005101467 | FR-1, FR-2, FR-21, FR-7 |
+| Samiul Hasan Sakib | 0242220005101472 | FR-17, FR-18, FR-22, FR-3, FR-14 |
+| Md. Rifat Hossain Shan | 0242220005101477 | FR-3, FR-8, FR-19, FR-6 |
+| Mimtaj Hossain Sami | 0242220005101457 | FR-9, FR-10, FR-11, FR-12, FR-16 |
+| Anik Kumar Kuri | 0242220005101077 | FR-4, FR-5, FR-15, FR-20 |
 
 ## Features
 
@@ -50,4 +50,5 @@ The system goes beyond traditional booking software by integrating Artificial In
 #### Clone the Repository:
 ```bash
 git clone https://github.com/your-username/smartsalon-system.git
+
 cd smartsalon-system
