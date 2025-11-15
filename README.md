@@ -1,178 +1,162 @@
-Title
-Smart Salon & Beauty Parlour Reservation & Management System
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Salon & Beauty Parlour Reservation & Management System - README</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h1 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        pre {
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .section-title {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
 
-Project Description
-The "Smart Salon & Beauty Parlour Reservation & Management System" is a comprehensive, AI-powered platform designed to revolutionize the beauty and wellness industry. It streamlines the entire business operation for salon owners while providing a personalized and seamless experience for customers.
+    <h1>Smart Salon & Beauty Parlour Reservation & Management System</h1>
 
-The system goes beyond traditional booking software by integrating Artificial Intelligence to offer personalized style and beauty recommendations. For customers, it provides an intuitive mobile and web interface to discover services, book appointments with preferred stylists, receive AI-driven suggestions, and manage their beauty profiles. For salon administrators and staff, it offers a powerful dashboard to manage appointments, inventory, staff schedules, customer relationships, and business analytics, all in one place. The core innovation lies in leveraging AI to bridge the gap between customer desires and expert services, making every visit highly personalized and efficient.
+    <h2>Project Description</h2>
+    <p>The "Smart Salon & Beauty Parlour Reservation & Management System" is a comprehensive, AI-powered platform designed to revolutionize the beauty and wellness industry. It streamlines the entire business operation for salon owners while providing a personalized and seamless experience for customers.</p>
+    <p>The system goes beyond traditional booking software by integrating Artificial Intelligence to offer personalized style and beauty recommendations. For customers, it provides an intuitive mobile and web interface to discover services, book appointments with preferred stylists, receive AI-driven suggestions, and manage their beauty profiles. For salon administrators and staff, it offers a powerful dashboard to manage appointments, inventory, staff schedules, customer relationships, and business analytics, all in one place. The core innovation lies in leveraging AI to bridge the gap between customer desires and expert services, making every visit highly personalized and efficient.</p>
 
-Team & Task Distribution
-Team Member	Role / Primary Focus	Assigned Functional Requirements (FRs)
-Riajul Haque Rafi (0242220005101467)	Customer Facing & UI/UX Specialist (Web)	FR-1, FR-2, FR-21, FR-7
-Samiul Hasan Sakib (0242220005101472)	Backend & AI Integration Specialist	FR-17, FR-18, FR-22, FR-3, FR-14
-Md. Rifat Hossain Shan (0242220005101477)	Booking & Notification System Engineer	FR-3, FR-8, FR-19, FR-6
-Mimtaj Hossain Sami (0242220005101457)	Admin & Business Logic Developer	FR-9, FR-10, FR-11, FR-12, FR-16
-Anik Kumar Kuri (0242220005101077)	Mobile App & Customer Loyalty Developer	FR-4, FR-5, FR-15, FR-20
+    <h2>Team & Task Distribution</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Team Member</th>
+                <th>Role / Primary Focus</th>
+                <th>Assigned Functional Requirements (FRs)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Riajul Haque Rafi<br>(0242220005101467)</td>
+                <td>Customer Facing & UI/UX Specialist (Web)</td>
+                <td>FR-1, FR-2, FR-21, FR-7</td>
+            </tr>
+            <tr>
+                <td>Samiul Hasan Sakib<br>(0242220005101472)</td>
+                <td>Backend & AI Integration Specialist</td>
+                <td>FR-17, FR-18, FR-22, FR-3, FR-14</td>
+            </tr>
+            <tr>
+                <td>Md. Rifat Hossain Shan<br>(0242220005101477)</td>
+                <td>Booking & Notification System Engineer</td>
+                <td>FR-3, FR-8, FR-19, FR-6</td>
+            </tr>
+            <tr>
+                <td>Mimtaj Hossain Sami<br>(0242220005101457)</td>
+                <td>Admin & Business Logic Developer</td>
+                <td>FR-9, FR-10, FR-11, FR-12, FR-16</td>
+            </tr>
+            <tr>
+                <td>Anik Kumar Kuri<br>(0242220005101077)</td>
+                <td>Mobile App & Customer Loyalty Developer</td>
+                <td>FR-4, FR-5, FR-15, FR-20</td>
+            </tr>
+        </tbody>
+    </table>
 
-Features
-For Customers:
-•	User Registration & Profiles: Secure sign-up and personalized beauty profiles.
-•	AI-Powered Beauty Assistant: Chatbot for style recommendations and service queries.
-•	Smart Service Discovery: Browse services, view stylist portfolios, and read reviews.
-•	Intelligent Booking System: Easy appointment scheduling with real-time availability.
-•	Personalized Dashboard: Manage appointments, view history, and save favorite styles.
-•	Push & Email Notifications: Reminders for upcoming appointments and exclusive offers.
-•	Mobile App: Full booking functionality on the go.
+    <h2>Features</h2>
+    <h3>For Customers:</h3>
+    <ul>
+        <li>User Registration & Profiles: Secure sign-up and personalized beauty profiles.</li>
+        <li>AI-Powered Beauty Assistant: Chatbot for style recommendations and service queries.</li>
+        <li>Smart Service Discovery: Browse services, view stylist portfolios, and read reviews.</li>
+        <li>Intelligent Booking System: Easy appointment scheduling with real-time availability.</li>
+        <li>Personalized Dashboard: Manage appointments, view history, and save favorite styles.</li>
+        <li>Push & Email Notifications: Reminders for upcoming appointments and exclusive offers.</li>
+        <li>Mobile App: Full booking functionality on the go.</li>
+    </ul>
 
-For Staff & Stylists:
-•	Staff Dashboard: View personal schedule, manage customer appointments, and update service status.
-•	Customer Management: Access customer history and preferences before appointments.
-•	Performance Analytics: Track personal performance and commissions.
+    <h3>For Staff & Stylists:</h3>
+    <ul>
+        <li>Staff Dashboard: View personal schedule, manage customer appointments, and update service status.</li>
+        <li>Customer Management: Access customer history and preferences before appointments.</li>
+        <li>Performance Analytics: Track personal performance and commissions.</li>
+    </ul>
 
-For Administrators:
-•	Comprehensive Dashboard: Overview of business performance, revenue, and key metrics.
-•	Staff Management: Add/edit staff, manage roles, and set schedules.
-•	Service & Inventory Management: Update service menu, prices, and track product inventory.
-•	Appointment Oversight: Monitor all bookings, resolve conflicts, and manage the calendar.
-•	Advanced Reporting: Generate detailed reports on sales, customer trends, and staff performance.
-•	Marketing Tools: Create and send promotional offers to customer segments.
+    <h3>For Administrators:</h3>
+    <ul>
+        <li>Comprehensive Dashboard: Overview of business performance, revenue, and key metrics.</li>
+        <li>Staff Management: Add/edit staff, manage roles, and set schedules.</li>
+        <li>Service & Inventory Management: Update service menu, prices, and track product inventory.</li>
+        <li>Appointment Oversight: Monitor all bookings, resolve conflicts, and manage the calendar.</li>
+        <li>Advanced Reporting: Generate detailed reports on sales, customer trends, and staff performance.</li>
+        <li>Marketing Tools: Create and send promotional offers to customer segments.</li>
+    </ul>
 
-Installation & Setup Guide
-Prerequisites:
-Node.js (v16 or above) and npm / Python (v3.8 or above) and pip
-MongoDB (v4.4 or above) / PostgreSQL (v12 or above)
-Git
-Steps:
-Clone the Repository:
-bash
+    <h2>Installation & Setup Guide</h2>
+    <h3>Prerequisites:</h3>
+    <ul>
+        <li>Node.js (v16 or above) and npm / Python (v3.8 or above) and pip</li>
+        <li>MongoDB (v4.4 or above) / PostgreSQL (v12 or above)</li>
+        <li>Git</li>
+    </ul>
+
+    <h3>Steps:</h3>
+    <h4>Clone the Repository:</h4>
+    <pre><code>bash
 git clone https://github.com/your-username/smartsalon-system.git
-cd smartsalon-system
-Backend Setup:
-bash
-cd backend
-npm install  # or `pip install -r requirements.txt` for Python
-Environment Configuration:
+cd smartsalon-system</code></pre>
 
-Create a .env file in the backend directory.
-Add the following variables:
-env
+    <h4>Backend Setup:</h4>
+    <pre><code>bash
+cd backend
+npm install # or `pip install -r requirements.txt` for Python</code></pre>
+
+    <h4>Environment Configuration:</h4>
+    <p>Create a <code>.env</code> file in the backend directory. Add the following variables:</p>
+    <pre><code>env
 DATABASE_URL=your_database_connection_string
 JWT_SECRET=your_super_secret_jwt_key
 AI_API_KEY=your_ai_provider_api_key
 EMAIL_SERVICE_KEY=your_email_service_key
-SMS_SERVICE_KEY=your_sms_service_key
-Database Initialization:
-Ensure your MongoDB/PostgreSQL server is running.
-The application will create necessary collections/tables on first run.
-Run the Backend Server:
-bash
-npm start  # or `python app.py` / `flask run`
-The API server will start on http://localhost:5000.
-Frontend Setup (Web):
-bash
-cd ../frontend
-npm install
-npm start
-The client will start on http://localhost:3000.
-Mobile App Setup:
-bash
-cd ../mobile-app
-npm install
-npx react-native run-android  # or `npx react-native run-ios`
-(Ensure an emulator/device is connected).
+SMS_SERVICE_KEY=your_sms_service_key</code></pre>
 
-Acknowledgement
-We would like to express our profound gratitude and appreciation to our project supervisor, Md. Mezbaul Islam Zion, for his invaluable guidance, unwavering support, and insightful feedback throughout the development of this project. His expertise and encouragement was instrumental in shaping this endeavor.
-
-We are also thankful to our university, Daffodil International University, and the faculty of the CSE for providing us with the necessary resources and a conducive environment for learning and innovation.
-
-Finally, we extend our sincere thanks to our teammates for their dedication, collaboration, and hard work. This project is a testament to our collective effort and shared commitment to excellence.
-Title
-Smart Salon & Beauty Parlour Reservation & Management System
-
-Project Description
-The "Smart Salon & Beauty Parlour Reservation & Management System" is a comprehensive, AI-powered platform designed to revolutionize the beauty and wellness industry. It streamlines the entire business operation for salon owners while providing a personalized and seamless experience for customers.
-
-The system goes beyond traditional booking software by integrating Artificial Intelligence to offer personalized style and beauty recommendations. For customers, it provides an intuitive mobile and web interface to discover services, book appointments with preferred stylists, receive AI-driven suggestions, and manage their beauty profiles. For salon administrators and staff, it offers a powerful dashboard to manage appointments, inventory, staff schedules, customer relationships, and business analytics, all in one place. The core innovation lies in leveraging AI to bridge the gap between customer desires and expert services, making every visit highly personalized and efficient.
-
-Team & Task Distribution
-Team Member	Role / Primary Focus	Assigned Functional Requirements (FRs)
-Riajul Haque Rafi (0242220005101467)	Customer Facing & UI/UX Specialist (Web)	FR-1, FR-2, FR-21, FR-7
-Samiul Hasan Sakib (0242220005101472)	Backend & AI Integration Specialist	FR-17, FR-18, FR-22, FR-3, FR-14
-Md. Rifat Hossain Shan (0242220005101477)	Booking & Notification System Engineer	FR-3, FR-8, FR-19, FR-6
-Mimtaj Hossain Sami (0242220005101457)	Admin & Business Logic Developer	FR-9, FR-10, FR-11, FR-12, FR-16
-Anik Kumar Kuri (0242220005101077)	Mobile App & Customer Loyalty Developer	FR-4, FR-5, FR-15, FR-20
-
-Features
-For Customers:
-•	User Registration & Profiles: Secure sign-up and personalized beauty profiles.
-•	AI-Powered Beauty Assistant: Chatbot for style recommendations and service queries.
-•	Smart Service Discovery: Browse services, view stylist portfolios, and read reviews.
-•	Intelligent Booking System: Easy appointment scheduling with real-time availability.
-•	Personalized Dashboard: Manage appointments, view history, and save favorite styles.
-•	Push & Email Notifications: Reminders for upcoming appointments and exclusive offers.
-•	Mobile App: Full booking functionality on the go.
-
-For Staff & Stylists:
-•	Staff Dashboard: View personal schedule, manage customer appointments, and update service status.
-•	Customer Management: Access customer history and preferences before appointments.
-•	Performance Analytics: Track personal performance and commissions.
-
-For Administrators:
-•	Comprehensive Dashboard: Overview of business performance, revenue, and key metrics.
-•	Staff Management: Add/edit staff, manage roles, and set schedules.
-•	Service & Inventory Management: Update service menu, prices, and track product inventory.
-•	Appointment Oversight: Monitor all bookings, resolve conflicts, and manage the calendar.
-•	Advanced Reporting: Generate detailed reports on sales, customer trends, and staff performance.
-•	Marketing Tools: Create and send promotional offers to customer segments.
-
-Installation & Setup Guide
-Prerequisites:
-Node.js (v16 or above) and npm / Python (v3.8 or above) and pip
-MongoDB (v4.4 or above) / PostgreSQL (v12 or above)
-Git
-Steps:
-Clone the Repository:
-bash
-git clone https://github.com/your-username/smartsalon-system.git
-cd smartsalon-system
-Backend Setup:
-bash
-cd backend
-npm install  # or `pip install -r requirements.txt` for Python
-Environment Configuration:
-
-Create a .env file in the backend directory.
-Add the following variables:
-env
-DATABASE_URL=your_database_connection_string
-JWT_SECRET=your_super_secret_jwt_key
-AI_API_KEY=your_ai_provider_api_key
-EMAIL_SERVICE_KEY=your_email_service_key
-SMS_SERVICE_KEY=your_sms_service_key
-Database Initialization:
-Ensure your MongoDB/PostgreSQL server is running.
-The application will create necessary collections/tables on first run.
-Run the Backend Server:
-bash
-npm start  # or `python app.py` / `flask run`
-The API server will start on http://localhost:5000.
-Frontend Setup (Web):
-bash
-cd ../frontend
-npm install
-npm start
-The client will start on http://localhost:3000.
-Mobile App Setup:
-bash
-cd ../mobile-app
-npm install
-npx react-native run-android  # or `npx react-native run-ios`
-(Ensure an emulator/device is connected).
-
-Acknowledgement
-We would like to express our profound gratitude and appreciation to our project supervisor, Md. Mezbaul Islam Zion, for his invaluable guidance, unwavering support, and insightful feedback throughout the development of this project. His expertise and encouragement was instrumental in shaping this endeavor.
-
-We are also thankful to our university, Daffodil International University, and the faculty of the CSE for providing us with the necessary resources and a conducive environment for learning and innovation.
-
-Finally, we extend our sincere thanks to our teammates for their dedication, collaboration, and hard work. This project is a testament to our collective effort and shared commitment to excellence.
+    <h4>Database Initialization:</h4>
+    <p>Ensure your MongoDB/PostgreSQL server is running. The application will create necessary collections/table
