@@ -46,50 +46,75 @@ The system goes beyond traditional booking software by integrating Artificial In
 *   Git
 
 ### Steps:
+````markdown
+### Steps
 
-#### Clone the Repository:
+#### Clone the Repository
 ```bash
 git clone https://github.com/your-username/smartsalon-system.git
-
 cd smartsalon-system
-Backend Setup:
-bash
-cd backend
-npm install  # or `pip install -r requirements.txt` for Python
-Environment Configuration:
+````
 
-Create a .env file in the backend directory.
-Add the following variables:
-env
+#### Backend Setup
+
+```bash
+cd backend
+npm install  # or: pip install -r requirements.txt for Python
+```
+
+#### Environment Configuration
+
+Create a `.env` file in the `backend` directory and add the following variables:
+
+```env
 DATABASE_URL=your_database_connection_string
 JWT_SECRET=your_super_secret_jwt_key
 AI_API_KEY=your_ai_provider_api_key
 EMAIL_SERVICE_KEY=your_email_service_key
 SMS_SERVICE_KEY=your_sms_service_key
-Database Initialization:
+```
+
+#### Database Initialization
+
 Ensure your MongoDB/PostgreSQL server is running.
 The application will create necessary collections/tables on first run.
-Run the Backend Server:
-bash
-npm start  # or `python app.py` / `flask run`
-The API server will start on http://localhost:5000.
-Frontend Setup (Web):
-bash
+
+#### Run the Backend Server
+
+```bash
+npm start  # or: python app.py / flask run
+```
+
+The API server will start on `http://localhost:5000`.
+
+#### Frontend Setup (Web)
+
+```bash
 cd ../frontend
 npm install
 npm start
-The client will start on http://localhost:3000.
-Mobile App Setup:
-bash
+```
+
+The client will start on `http://localhost:3000`.
+
+#### Mobile App Setup
+
+```bash
 cd ../mobile-app
 npm install
-npx react-native run-android  # or `npx react-native run-ios`
+npx react-native run-android  # or: npx react-native run-ios
+```
+
 (Ensure an emulator/device is connected).
 
-Acknowledgement
+## Acknowledgement
+
 We would like to express our profound gratitude and appreciation to our project supervisor, Md. Mezbaul Islam Zion, for his invaluable guidance, unwavering support, and insightful feedback throughout the development of this project. His expertise and encouragement was instrumental in shaping this endeavor.
 
 We are also thankful to our university, Daffodil International University, and the faculty of the CSE for providing us with the necessary resources and a conducive environment for learning and innovation.
 
 Finally, we extend our sincere thanks to our teammates for their dedication, collaboration, and hard work. This project is a testament to our collective effort and shared commitment to excellence.
+
+
+
 
