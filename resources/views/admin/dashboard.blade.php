@@ -6,3 +6,4 @@
         <h3 class='text-main'>Appointments</h3>
         <p>Bookings Today: <strong class='text-primary'>todaysBookings</strong></p>
         <p>Upcoming Confrimed: <strong class='test-primary'>upcomingBookings</strong></p>
+</div>
