@@ -4,6 +4,12 @@
 
     <div class='card'>
         <h3 class='text-main'>Appointments</h3>
-        <p>Bookings Today: <strong class='text-primary'>todaysBookings</strong></p>
-        <p>Upcoming Confrimed: <strong class='test-primary'>upcomingBookings</strong></p>
+        <p>Bookings Today: </p>
+        <p>Upcoming Confrimed: </p>
+</div>
+
+<div class='card'>
+    <h3 class='text-main'>Sales</h3>
+    <p>Today's Sales: <strong class='text-highlight'>BDT</strong> </p>
+    <p>This Month's Sales: <strong class='text-highlight'>BDT</strong> </p>
 </div>
