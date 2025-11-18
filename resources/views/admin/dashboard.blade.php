@@ -13,3 +13,10 @@
     <p>Today's Sales: <strong class='text-highlight'>BDT</strong> </p>
     <p>This Month's Sales: <strong class='text-highlight'>BDT</strong> </p>
 </div>
+
+<div class='card'>
+    <h3 class='text-main'>Customer Data</h3>
+    <p>Total Customers: </p>
+    <p>New Customers This Month: </p>
+</div>
+
