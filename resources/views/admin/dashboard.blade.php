@@ -19,4 +19,8 @@
     <p>Total Customers: </p>
     <p>New Customers This Month: </p>
 </div>
-
+<div class='card'>
+    <h3 class='text-main'>Staff Performance</h3>
+    <p>Top Performer: </p>
+    <p>Average Rating: </p> 
+</div>
