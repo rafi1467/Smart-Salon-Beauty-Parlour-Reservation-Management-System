@@ -9,7 +9,7 @@ The system goes beyond traditional booking software by integrating Artificial In
 | Team Member Name | Team Member ID | Assigned Functional Requirements (FRs) |
 |---|---|---|
 | Riajul Haque Rafi | 0242220005101467 | FR-1, FR-2, FR-21, FR-7 |
-| Samiul Hasan Sakib | 0242220005101472 | FR-17, FR-18, FR-22, FR-3, FR-14 |
+| Samiul Hasan Sakib | 0242220005101472 | FR-17, FR-18, FR-22, FR-13, FR-14 |
 | Md. Rifat Hossain Shan | 0242220005101477 | FR-3, FR-8, FR-19, FR-6 |
 | Mimtaj Hossain Sami | 0242220005101457 | FR-9, FR-10, FR-11, FR-12, FR-16 |
 | Anik Kumar Kuri | 0242220005101077 | FR-4, FR-5, FR-15, FR-20 |
@@ -114,6 +114,7 @@ We would like to express our profound gratitude and appreciation to our project 
 We are also thankful to our university, Daffodil International University, and the faculty of the CSE for providing us with the necessary resources and a conducive environment for learning and innovation.
 
 Finally, we extend our sincere thanks to our teammates for their dedication, collaboration, and hard work. This project is a testament to our collective effort and shared commitment to excellence.
+
 
 
 
