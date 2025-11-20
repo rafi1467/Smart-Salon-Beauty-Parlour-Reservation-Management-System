@@ -4,28 +4,35 @@ namespace App\Http\Controllers;
 
 use App\Models\Booking;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
 class BookingController extends Controller
 {
-    // Show booking history for the logged-in user
+    // Show booking history (for now: all bookings)
     public function index()
     {
-        $bookings = Booking::where('user_id', Auth::id())
-            ->orderByDesc('booking_date')
+        $bookings = Booking::orderByDesc('booking_date')
             ->orderByDesc('booking_time')
             ->get();
 
         return view('bookings.index', compact('bookings'));
     }
 
+    // Show booking confirmation / details
+    public function show(Booking $booking)
+    {
+        return view('bookings.show', compact('booking'));
+    }
+
+    // Show invoice for a booking
+    public function invoice(Booking $booking)
+    {
+        return view('bookings.invoice', compact('booking'));
+    }
+
     // Cancel a booking (basic version)
     public function cancel(Booking $booking)
     {
-        // Make sure user can only cancel their own booking
-        if ($booking->user_id !== Auth::id()) {
-            abort(403);
-        }
+        // here you can later add auth checks
 
         // Optional rule: don’t cancel past bookings
         if ($booking->booking_date < now()->toDateString()) {
