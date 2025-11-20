@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Book Appointment - Smart Salon</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #4a4a4a;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input {
+            margin-bottom: 15px;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+        }
+        button {
+            padding: 12px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #5a67d8;
+        }
+        .message {
+            margin-top: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .success {
+            color: green;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Book Your Appointment</h2>
+        <form id="bookingForm">
+            <input id="user_id" placeholder="User ID (optional)" type="number">
+            <input id="user_email" placeholder="User Email (for notifications)" type="email">
+            <input id="service_id" placeholder="Service ID" type="number" required>
+            <input id="staff_id" placeholder="Staff ID" type="number">
+            <input id="date" type="date" required>
+            <input id="time" type="time" required>
+            <button type="submit">Book Appointment</button>
+        </form>
+        <div id="message" class="message"></div>
+    </div>
+
+    <script>
+        const API_BASE = window.location.origin + '/api';
+
+        document.getElementById('bookingForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const messageDiv = document.getElementById('message');
+            messageDiv.className = 'message';
+            messageDiv.textContent = 'Processing...';
+
+            const payload = {
+                user_id: document.getElementById('user_id').value || null,
+                service_id: document.getElementById('service_id').value,
+                staff_id: document.getElementById('staff_id').value || null,
+                date: document.getElementById('date').value,
+                time: document.getElementById('time').value,
+                user_email: document.getElementById('user_email').value || null
+            };
+
+            try {
+                const res = await fetch(API_BASE + '/appointment/book', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+                    body: JSON.stringify(payload)
+                });
+                const data = await res.json();
+                if (res.ok && data.success) {
+                    messageDiv.className = 'message success';
+                    messageDiv.textContent = 'Booking successful!';
+                    console.log(data.data);
+                    document.getElementById('bookingForm').reset();
+                } else {
+                    messageDiv.className = 'message error';
+                    messageDiv.textContent = 'Booking failed: ' + (data.message || res.statusText);
+                }
+            } catch (error) {
+                messageDiv.className = 'message error';
+                messageDiv.textContent = 'An error occurred. Please try again.';
+                console.error(error);
+            }
+        });
+    </script>
+</body>
+</html>

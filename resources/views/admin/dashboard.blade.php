@@ -19,4 +19,3 @@
     <p>Total Customers: </p>
     <p>New Customers This Month: </p>
 </div>
-

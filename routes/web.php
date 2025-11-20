@@ -1,10 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ServiceController;
 
+// Home: redirect to booking history
 Route::get('/', function () {
-    return view('home');
+    return redirect()->route('bookings.index');
 });
-
-Route::get('/services', [ServiceController::class, 'index'])->name('services.index');

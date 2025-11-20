@@ -8,9 +8,13 @@
         <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
             Book your perfect style with our smart reservation system
         </p>
-        <a href="/services" 
+        <a href="/services"
            class="bg-accent text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-opacity-90 inline-block">
             Browse Services
+        </a>
+        <a href="/booking"
+           class="bg-primary text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-opacity-90 inline-block ml-4">
+            Book Appointment
         </a>
     </div>
 
