@@ -15,7 +15,15 @@
         .message { padding: 10px; margin-bottom: 15px; border-radius: 4px; }
         .message-success { background-color: #d4edda; }
         .message-error { background-color: #f8d7da; }
-        button { padding: 6px 10px; cursor: pointer; }
+        button, a.button-link {
+            padding: 6px 10px;
+            cursor: pointer;
+            text-decoration: none;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background: #f5f5f5;
+            margin-right: 5px;
+        }
     </style>
 </head>
 <body>
@@ -62,6 +70,9 @@
                         </td>
                         <td>{{ $booking->loyalty_points_earned ?? 0 }}</td>
                         <td>
+                            <a href="{{ route('bookings.show', $booking) }}" class="button-link">View</a>
+                            <a href="{{ route('bookings.invoice', $booking) }}" class="button-link">Invoice</a>
+
                             @if($booking->payment_status !== 'cancelled')
                                 <form action="{{ route('bookings.cancel', $booking) }}" method="POST" style="display:inline;">
                                     @csrf
@@ -70,7 +81,7 @@
                                     </button>
                                 </form>
                             @else
-                                —
+                                {{-- already cancelled --}}
                             @endif
                         </td>
                     </tr>
