@@ -3,19 +3,46 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookingController;
 
-// Home: redirect to booking history
+/*
+|--------------------------------------------------------------------------
+| Home Page
+|--------------------------------------------------------------------------
+*/
+
 Route::get('/', function () {
-    return redirect()->route('bookings.index');
-});
+    return view('home');   // loads resources/views/home.blade.php
+})->name('home');
 
-// Booking routes
-Route::get('/bookings', [BookingController::class, 'index'])->name('bookings.index');
 
-// Booking confirmation / details
-Route::get('/bookings/{booking}', [BookingController::class, 'show'])->name('bookings.show');
+/*
+|--------------------------------------------------------------------------
+| Services Page (Fix for services.index error)
+|--------------------------------------------------------------------------
+|
+| Make sure you have: resources/views/services.blade.php
+| If your teammate made a services page, it will now work.
+|
+*/
 
-// Booking invoice
-Route::get('/bookings/{booking}/invoice', [BookingController::class, 'invoice'])->name('bookings.invoice');
+Route::get('/services', function () {
+    return view('services');
+})->name('services.index');
 
-// Cancel booking
-Route::post('/bookings/{booking}/cancel', [BookingController::class, 'cancel'])->name('bookings.cancel');
+
+/*
+|--------------------------------------------------------------------------
+| Booking Routes
+|--------------------------------------------------------------------------
+*/
+
+Route::get('/bookings', [BookingController::class, 'index'])
+    ->name('bookings.index');
+
+Route::get('/bookings/{booking}', [BookingController::class, 'show'])
+    ->name('bookings.show');
+
+Route::get('/bookings/{booking}/invoice', [BookingController::class, 'invoice'])
+    ->name('bookings.invoice');
+
+Route::post('/bookings/{booking}/cancel', [BookingController::class, 'cancel'])
+    ->name('bookings.cancel');
