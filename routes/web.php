@@ -10,24 +10,8 @@ use App\Http\Controllers\BookingController;
 */
 
 Route::get('/', function () {
-    return view('home');   // loads resources/views/home.blade.php
-})->name('home');
-
-
-/*
-|--------------------------------------------------------------------------
-| Services Page (Fix for services.index error)
-|--------------------------------------------------------------------------
-|
-| Make sure you have: resources/views/services.blade.php
-| If your teammate made a services page, it will now work.
-|
-*/
-
-Route::get('/services', function () {
-    return view('services');
-})->name('services.index');
-
+    return redirect()->route('bookings.index');
+});
 
 /*
 |--------------------------------------------------------------------------
