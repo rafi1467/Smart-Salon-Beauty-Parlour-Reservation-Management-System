@@ -13,7 +13,7 @@
     </header>
     <main>
         @yield('main')
-        @yield('chatBot')
+        
     </main>
     <sidebar>
         @include('partials.sidebar')

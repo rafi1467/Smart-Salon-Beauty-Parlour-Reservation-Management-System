@@ -1,11 +1,8 @@
-@extends('layouts.main')
-@section('chatBot')
-
 <!-- CSS -->
 
 <link rel="stylesheet" href="/css/chat_bot_styles.css">
 
-
+<link rel="icon" type="image/png" href="/images/WhatsApp_Image_2025-11-17_at_00.14.30-removebg-preview.png"/>
 <!-- main body -->
 
 
@@ -32,5 +29,3 @@
 
 
 <script src="/script/chat_bot_script.js"></script>
-
-@endsection

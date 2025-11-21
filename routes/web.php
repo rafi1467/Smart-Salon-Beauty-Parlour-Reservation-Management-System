@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookingController;
+
 // Home: redirect to booking history
 Route::get('/', function () {
     return view('pages.home');
@@ -11,7 +12,7 @@ Route::get('/chat-bot', function () {
     return view('pages.chatbot');
 });
 
-Route::get('/booking', function () {
+Route::get('/bookings', function () {
     return redirect()->route('bookings.index');
 });
 
@@ -26,4 +27,3 @@ Route::get('/bookings/{booking}/invoice', [BookingController::class, 'invoice'])
 
 // Cancel booking
 Route::post('/bookings/{booking}/cancel', [BookingController::class, 'cancel'])->name('bookings.cancel');
-
