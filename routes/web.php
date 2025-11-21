@@ -11,7 +11,7 @@ Route::get('/chat-bot', function () {
     return view('pages.chatbot');
 });
 
-Route::get('/', function () {
+Route::get('/booking', function () {
     return redirect()->route('bookings.index');
 });
 
