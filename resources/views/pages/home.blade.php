@@ -1,6 +1,7 @@
 @extends('layouts.main')
 
 @section('main')
+
 <div class="max-w-7xl mx-auto py-12 px-4">
     <!-- Hero Section -->
     <div class="text-center mb-16">

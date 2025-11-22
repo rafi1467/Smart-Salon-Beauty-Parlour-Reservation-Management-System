@@ -10,7 +10,7 @@ use App\Http\Controllers\BookingController;
 */
 
 Route::get('/', function () {
-    return redirect()->route('bookings.index');
+    return view('layouts.main');
 });
 
 /*
