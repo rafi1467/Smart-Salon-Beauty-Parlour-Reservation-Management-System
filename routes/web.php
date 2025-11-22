@@ -13,18 +13,27 @@ Route::get('/', function () {
     return view('layouts.main');
 });
 
+Route::get('/home', function () {
+    return view('pages.home');
+});
+
 /*
 |--------------------------------------------------------------------------
-| Booking Routes
+| Chatbot Routes
 |--------------------------------------------------------------------------
 */
+
 Route::get('/chat-bot', function () {
     return view('pages.chatbot');
 });
 
-Route::get('/home', function () {
-    return view('pages.home');
-});
+/*
+|--------------------------------------------------------------------------
+| Admin Routes
+|--------------------------------------------------------------------------
+*/
+
+
 
 Route::get('/admin', function () {
     return view('admin.bookings.index');
@@ -38,9 +47,23 @@ Route::get('/dashboard', function () {
     return view('admin.dashboard');
 });
 
+/*
+|--------------------------------------------------------------------------
+| Appointment Routes
+|--------------------------------------------------------------------------
+*/
+
+
 Route::get('/appointment', function () {
     return view('appointment.booking');
 });
+
+/*
+|--------------------------------------------------------------------------
+| Bookings Routes
+|--------------------------------------------------------------------------
+*/
+
 
 Route::get('/bookings', [BookingController::class, 'index'])
     ->name('bookings.index');
