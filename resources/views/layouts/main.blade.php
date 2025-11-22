@@ -6,137 +6,290 @@
     <link rel="icon" type="image/png" href="/images/WhatsApp_Image_2025-11-17_at_00.14.30-removebg-preview.png"/>
     <title>Smart Salon</title>
     <style>
-        /* ===== Global Styling ===== */
-    body {
-        font-family: 'Poppins', sans-serif;
-        background: #f7f9fc;
-    }
+     /* ===== Global ===== */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f4f6fb;
+    display: flex;
+    height: 100vh;
+}
 
-    /* ===== Hero Section ===== */
-    .hero-title {
-        background: linear-gradient(135deg, #8b5cf6, #ec4899);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
+/* ===== Sidebar ===== */
+.sidebar {
+    width: 240px;
+    background: #111827;
+    color: white;
+    padding: 20px 0;
+    position: fixed;
+    height: 100%;
+}
 
-    .hero-buttons a {
-        transition: 0.3s ease;
-    }
+.sidebar .logo {
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+}
 
-    .hero-buttons a:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-    }
+.sidebar .menu {
+    list-style: none;
+    padding: 0;
+}
 
-    /* ===== Feature Cards ===== */
-    .feature-card {
-        border-radius: 20px;
-        transition: all 0.3s ease-in-out;
-        background: rgba(255, 255, 255, 0.85);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255,255,255,0.4);
-    }
+.sidebar .menu li {
+    padding: 15px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
 
-    .feature-card:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 12px 30px rgba(0,0,0,0.1);
-    }
+.sidebar .menu li i {
+    width: 25px;
+}
 
-    .feature-icon {
-        width: 70px;
-        height: 70px;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: auto;
-        font-size: 28px;
-        color: white;
-        box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-    }
+.sidebar .menu li:hover,
+.sidebar .menu .active {
+    background: #1f2937;
+    color: #38bdf8;
+}
 
-    /* ===== CTA Section ===== */
-    .cta-box {
-        background: linear-gradient(135deg, #6366f1, #ec4899);
-        border-radius: 25px;
-        padding: 50px;
-        box-shadow: 0 20px 40px rgba(0,0,0,0.12);
-    }
+/* ===== Main Content ===== */
+.main {
+    margin-left: 240px;
+    width: calc(100% - 240px);
+    padding: 25px;
+}
 
-    .cta-box a {
-        transition: 0.3s ease-in-out;
-    }
+/* ===== Top Bar ===== */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    .cta-box a:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 8px 20px rgba(255,255,255,0.5);
-    }
+.topbar h1 {
+    font-size: 28px;
+}
+
+.topbar .profile {
+    display: flex;
+    align-items: center;
+}
+
+.topbar input {
+    padding: 8px 12px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    margin-right: 15px;
+}
+
+.topbar img {
+    border-radius: 50%;
+    margin-left: 15px;
+}
+
+/* ===== Dashboard Cards ===== */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.icon {
+    padding: 20px;
+    border-radius: 12px;
+    font-size: 22px;
+    color: white;
+}
+
+.bg1 { background: #6366f1; }
+.bg2 { background: #f43f5e; }
+.bg3 { background: #10b981; }
+.bg4 { background: #f59e0b; }
+
+/* ===== Tables Section ===== */
+.tables {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+}
+
+.table {
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.table h2 {
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table tr th,
+table tr td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+/* ===== Customers List ===== */
+.customers ul {
+    list-style: none;
+    padding: 0;
+}
+
+.customers ul li {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+}
+
+.customers ul li img {
+    border-radius: 50%;
+    margin-right: 15px;
+}
 
     </style>
 </head>
 <body>
-    <div class="max-w-7xl mx-auto py-12 px-4">
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2 class="logo">Smart Salon</h2>
 
-    <!-- Hero Section -->
-    <div class="text-center mb-16">
-        <h1 class="hero-title text-4xl md:text-6xl font-bold mb-6">
-            Welcome to Smart Salon
-        </h1>
-
-        <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Book your perfect style with our smart reservation system
-        </p>
-
-        <div class="hero-buttons">
-            <a href="/services"
-               class="bg-accent text-white px-8 py-4 rounded-lg text-lg font-semibold inline-block">
-                Browse Services
-            </a>
-
-            <a href="/booking"
-               class="bg-primary text-white px-8 py-4 rounded-lg text-lg font-semibold inline-block ml-4">
-                Book Appointment
-            </a>
-        </div>
+        <ul class="menu">
+            <li class="active"><i class="fa fa-home"></i> Dashboard</li>
+            <li><i class="fa fa-calendar-check"></i> Appointments</li>
+            <li><i class="fa fa-scissors"></i> Services</li>
+            <li><i class="fa fa-users"></i> Customers</li>
+            <li><i class="fa fa-user-tie"></i> Stylists</li>
+            <li><i class="fa fa-cog"></i> Settings</li>
+            <li><i class="fa fa-right-from-bracket"></i> Logout</li>
+        </ul>
     </div>
 
-    <!-- Features -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+    <!-- Main Content -->
+    <div class="main">
 
-        <div class="feature-card p-6 text-center">
-            <div class="feature-icon bg-primary mb-4">
-                <i class="fas fa-clock"></i>
+        <!-- Top Bar -->
+        <div class="topbar">
+            <h1>Dashboard</h1>
+
+            <div class="profile">
+                <input type="text" placeholder="Search...">
+                <i class="fa fa-bell"></i>
+                <img src="https://i.pravatar.cc/40" alt="">
             </div>
-            <h3 class="text-xl font-semibold text-gray-800 mb-2">Easy Booking</h3>
-            <p class="text-gray-600">Book appointments 24/7 from any device</p>
         </div>
 
-        <div class="feature-card p-6 text-center">
-            <div class="feature-icon bg-highlight mb-4">
-                <i class="fas fa-star"></i>
+        <!-- Dashboard Cards -->
+        <div class="cards">
+
+            <div class="card">
+                <div class="icon bg1"><i class="fa fa-calendar-check"></i></div>
+                <div class="text">
+                    <h3>120</h3>
+                    <p>Today's Appointments</p>
+                </div>
             </div>
-            <h3 class="text-xl font-semibold text-gray-800 mb-2">Expert Stylists</h3>
-            <p class="text-gray-600">Professional team with years of experience</p>
+
+            <div class="card">
+                <div class="icon bg2"><i class="fa fa-users"></i></div>
+                <div class="text">
+                    <h3>540</h3>
+                    <p>Total Customers</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="icon bg3"><i class="fa fa-scissors"></i></div>
+                <div class="text">
+                    <h3>35</h3>
+                    <p>Available Stylists</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="icon bg4"><i class="fa fa-dollar-sign"></i></div>
+                <div class="text">
+                    <h3>$4,580</h3>
+                    <p>Today Revenue</p>
+                </div>
+            </div>
         </div>
 
-        <div class="feature-card p-6 text-center">
-            <div class="feature-icon bg-accent mb-4">
-                <i class="fas fa-calendar"></i>
+        <!-- Tables Section -->
+        <div class="tables">
+            
+            <!-- Appointments Table -->
+            <div class="table appointments">
+                <h2>Recent Appointments</h2>
+                <table>
+                    <tr>
+                        <th>Customer</th>
+                        <th>Service</th>
+                        <th>Stylist</th>
+                        <th>Time</th>
+                    </tr>
+
+                    <tr>
+                        <td>Sarah Khan</td>
+                        <td>Haircut</td>
+                        <td>John</td>
+                        <td>10:00 AM</td>
+                    </tr>
+
+                    <tr>
+                        <td>Arif Rahman</td>
+                        <td>Beard Trim</td>
+                        <td>David</td>
+                        <td>11:30 AM</td>
+                    </tr>
+
+                    <tr>
+                        <td>Mim Akter</td>
+                        <td>Hair Coloring</td>
+                        <td>Lisa</td>
+                        <td>1:00 PM</td>
+                    </tr>
+
+                </table>
             </div>
-            <h3 class="text-xl font-semibold text-gray-800 mb-2">Flexible Scheduling</h3>
-            <p class="text-gray-600">Choose dates and times that work for you</p>
+
+            <!-- Customers List -->
+            <div class="table customers">
+                <h2>New Customers</h2>
+
+                <ul>
+                    <li><img src="https://i.pravatar.cc/40?img=5"> <span>Amira Haque</span></li>
+                    <li><img src="https://i.pravatar.cc/40?img=8"> <span>Kamrul Islam</span></li>
+                    <li><img src="https://i.pravatar.cc/40?img=12"> <span>Faria Ahmed</span></li>
+                    <li><img src="https://i.pravatar.cc/40?img=15"> <span>Nadim Hasan</span></li>
+                </ul>
+            </div>
+
         </div>
     </div>
-
-    <!-- CTA Section -->
-    <div class="cta-box text-center">
-        <h2 class="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
-        <p class="text-white opacity-90 mb-6">Join hundreds of satisfied customers</p>
-
-        <a href="/register" class="bg-white text-primary px-8 py-3 rounded-lg font-semibold">
-            Create Your Account
-        </a>
-    </div>
-</div>
 </body>
 </html>
