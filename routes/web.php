@@ -10,14 +10,60 @@ use App\Http\Controllers\BookingController;
 */
 
 Route::get('/', function () {
-    return redirect()->route('bookings.index');
+    return view('layouts.main');
+});
+
+Route::get('/home', function () {
+    return view('pages.home');
 });
 
 /*
 |--------------------------------------------------------------------------
-| Booking Routes
+| Chatbot Routes
 |--------------------------------------------------------------------------
 */
+
+Route::get('/chat-bot', function () {
+    return view('pages.chatbot');
+});
+
+/*
+|--------------------------------------------------------------------------
+| Admin Routes
+|--------------------------------------------------------------------------
+*/
+
+
+
+Route::get('/admin', function () {
+    return view('admin.bookings.index');
+});
+
+Route::get('/services', function () {
+    return view('admin.services.create');
+});
+
+Route::get('/dashboard', function () {
+    return view('admin.dashboard');
+});
+
+/*
+|--------------------------------------------------------------------------
+| Appointment Routes
+|--------------------------------------------------------------------------
+*/
+
+
+Route::get('/appointment', function () {
+    return view('appointment.booking');
+});
+
+/*
+|--------------------------------------------------------------------------
+| Bookings Routes
+|--------------------------------------------------------------------------
+*/
+
 
 Route::get('/bookings', [BookingController::class, 'index'])
     ->name('bookings.index');
@@ -30,3 +76,4 @@ Route::get('/bookings/{booking}/invoice', [BookingController::class, 'invoice'])
 
 Route::post('/bookings/{booking}/cancel', [BookingController::class, 'cancel'])
     ->name('bookings.cancel');
+

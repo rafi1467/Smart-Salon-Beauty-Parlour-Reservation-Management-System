@@ -1,0 +1,2 @@
+#cHECK Database in terminal
+php artisan tinker --execute="dd(App\Models\Appointment::all());"
