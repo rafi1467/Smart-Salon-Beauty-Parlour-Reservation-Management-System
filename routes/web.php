@@ -38,6 +38,10 @@ Route::get('/dashboard', function () {
     return view('admin.dashboard');
 });
 
+Route::get('/appointment', function () {
+    return view('appointment.booking');
+});
+
 Route::get('/bookings', [BookingController::class, 'index'])
     ->name('bookings.index');
 
@@ -49,3 +53,4 @@ Route::get('/bookings/{booking}/invoice', [BookingController::class, 'invoice'])
 
 Route::post('/bookings/{booking}/cancel', [BookingController::class, 'cancel'])
     ->name('bookings.cancel');
+

@@ -1,6 +1,3 @@
-@extends('layouts.app')
-
-@section('content')
 <div class="max-w-4xl mx-auto py-12 px-4">
     <div class="bg-white rounded-lg shadow-lg p-8">
         <h1 class="text-3xl font-bold text-text mb-8 text-center">Book Your Appointment</h1>
@@ -143,4 +140,3 @@ document.getElementById('bookingForm').addEventListener('submit', async (e) => {
     }
 });
 </script>
-@endsection
