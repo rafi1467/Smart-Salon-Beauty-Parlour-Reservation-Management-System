@@ -16,11 +16,6 @@
            class="bg-primary text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-opacity-90 inline-block ml-4">
             Book Appointment
         </a>
-        <a href="/bookings"
-           class="bg-gray-700 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-opacity-90 inline-block ml-4">
-            My Bookings
-        </a>
-
     </div>
 
     <!-- Features -->

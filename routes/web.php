@@ -18,6 +18,25 @@ Route::get('/', function () {
 | Booking Routes
 |--------------------------------------------------------------------------
 */
+Route::get('/chat-bot', function () {
+    return view('pages.chatbot');
+});
+
+Route::get('/home', function () {
+    return view('pages.home');
+});
+
+Route::get('/admin', function () {
+    return view('admin.bookings.index');
+});
+
+Route::get('/services', function () {
+    return view('admin.services.create');
+});
+
+Route::get('/dashboard', function () {
+    return view('admin.dashboard');
+});
 
 Route::get('/bookings', [BookingController::class, 'index'])
     ->name('bookings.index');
