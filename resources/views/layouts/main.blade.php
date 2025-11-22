@@ -7,7 +7,7 @@
 <<<<<<< HEAD
     <title>SmartV</title>
 =======
-    <title>Smart Salon</title>
+    <title>SmartV</title>
     <style>
      /* ===== Global ===== */
 body {
@@ -180,7 +180,7 @@ table tr td {
 <body>
     <!-- Sidebar -->
     <div class="sidebar">
-        <h2 class="logo">Smart Salon</h2>
+        <h2 class="logo">SmartV</h2>
 
         <ul class="menu">
             <li class="active"><i class="fa fa-home"></i> Dashboard</li>
