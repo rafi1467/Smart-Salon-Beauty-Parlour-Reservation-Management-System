@@ -4,7 +4,7 @@
 <div class="max-w-7xl mx-auto py-12 px-4">
     <!-- Hero Section -->
     <div class="text-center mb-16">
-        <h1 class="text-4xl md:text-6xl font-bold text-text mb-6">Welcome to Smart Salon</h1>
+        <h1 class="text-4xl md:text-6xl font-bold text-text mb-6">Welcome to SmartV</h1>
         <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
             Book your perfect style with our smart reservation system
         </p>
