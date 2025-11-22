@@ -10,6 +10,17 @@
 .text-highlight { color: #88B04B; }
 .text-main    { color: #2C3E50; } 
 
+.btn {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+}
+
  .btn-success {
     background-color: #88B04B; /* Highlight */
 }
@@ -46,10 +57,10 @@
 
 <div style='display: flex; gap: 10px; margin-top: 10px;'>
     <form>
-    <button class='btn-success'>Confirm Booking</button>
+    <button class='btn btn-success'>Confirm Booking</button>
     </form>
     <form>
-    <button class='btn-danger'>Cancel Booking</button>
+    <button class='btn btn-danger'>Cancel Booking</button>
     </form>
 </div>
 </body>
