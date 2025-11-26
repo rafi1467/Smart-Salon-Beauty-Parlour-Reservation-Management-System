@@ -60,6 +60,11 @@
         </div>
     </nav>
 
+    <!-- Main Content Section -->
+    <main>
+        @yield('content')
+    </main>
+
     <!-- Hero Section -->
     <section class="hero-bg text-white py-20 md:py-32">
         <div class="max-w-7xl mx-auto px-4 text-center">
@@ -68,7 +73,7 @@
                 Discover the future of beauty with our AI-powered salon experience. Book appointments, get personalized recommendations, and look your best.
             </p>
             <div class="flex flex-col md:flex-row justify-center gap-4">
-                <a href="/services" class="bg-accent text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-opacity-90 transition-colors inline-block">
+                <a href="/appointment/book" class="bg-accent text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-opacity-90 transition-colors inline-block">
                     <i class="fas fa-calendar-alt mr-2"></i>Book Appointment
                 </a>
                 <a href="/stylists" class="bg-white text-primary px-8 py-4 rounded-lg text-lg font-semibold hover:bg-opacity-90 transition-colors inline-block">
@@ -132,7 +137,7 @@
                         <p class="text-gray-600 mb-4">Professional haircut with modern styling techniques.</p>
                         <div class="flex justify-between items-center">
                             <span class="text-primary font-bold text-lg">$35+</span>
-                            <a href="/services" class="text-accent font-medium">Book Now</a>
+                            <a href="/booking" class="text-accent font-medium">Book Now</a>
                         </div>
                     </div>
                 </div>

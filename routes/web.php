@@ -53,6 +53,9 @@ Route::get('/dashboard', function () {
 |--------------------------------------------------------------------------
 */
 
+Route::get('/appointment/book', function () {
+    return view('appointment.book');
+});
 
 Route::get('/appointment', function () {
     return view('appointment.booking');
