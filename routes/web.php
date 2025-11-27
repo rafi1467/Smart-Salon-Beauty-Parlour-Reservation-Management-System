@@ -90,9 +90,6 @@ use App\Http\Controllers\SslCommerzPaymentController;
 Route::get('/payment', function () {
     return view('sslpaymentgatway.exampleEasycheckout');
 });
-Route::get('/paymenthosted', function () {
-    return view('sslpaymentgatway.exampleHosted');
-});
 
 // SSLCOMMERZ Start
 Route::get('/example1', [SslCommerzPaymentController::class, 'exampleEasyCheckout']);
