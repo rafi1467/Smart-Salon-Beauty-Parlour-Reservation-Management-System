@@ -6,6 +6,7 @@
     <title>SmartV - Book Your Perfect Style</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/images/WhatsApp_Image_2025-11-17_at_00.14.30-removebg-preview.png"/>
     <style>
         .bg-primary { background-color: #5D8AA8; }
         .bg-secondary { background-color: #F0F4F8; }

@@ -80,3 +80,8 @@ Route::get('/bookings/{booking}/invoice', [BookingController::class, 'invoice'])
 Route::post('/bookings/{booking}/cancel', [BookingController::class, 'cancel'])
     ->name('bookings.cancel');
 
+/*
+|--------------------------------------------------------------------------
+| Payment Routes
+|--------------------------------------------------------------------------
+*/
