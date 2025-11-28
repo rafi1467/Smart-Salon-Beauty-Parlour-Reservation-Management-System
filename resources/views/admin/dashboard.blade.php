@@ -26,14 +26,13 @@
         </div>
     </div>
 
-    @endsection
-
     <div class="card">
         <h3 class="text-primary">Sales Overview (This Year)</h3>
         <canvas id="salesChart" height="100"></canvas>
     </div>
 </div>
 
+@endsection
 <script>
     const ctx = document.getElementById('salesChart').getContext('2d');
     const salesChart = new Chart(ctx, {
