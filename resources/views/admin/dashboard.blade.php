@@ -33,26 +33,3 @@
 </div>
 
 @endsection
-<script>
-    const ctx = document.getElementById('salesChart').getContext('2d');
-    const salesChart = new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-            datasets: [{
-                label: 'Monthly Sales (BDT)',
-                data: [12000, 19000, 3000, 5000, 20000, 30000, 45000, 25000, 35000, 40000, 0, 0],
-                borderColor: '#5D8AA8',
-                backgroundColor: 'rgba(93, 138, 168, 0.2)',
-                borderWidth: 2,
-                fill: true
-            }]
-        },
-        options: {
-            responsive: true,
-            scales: {
-                y: { beginAtZero: true }
-            }
-        }
-    });
-</script>
