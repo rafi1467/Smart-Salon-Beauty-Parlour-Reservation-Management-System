@@ -1,3 +1,7 @@
+@extends('layouts.app')
+
+@section('content')
+
 <div class="container-fluid">
     <h1 class="text-primary mb-4">Admin Dashboard</h1>
 
@@ -21,6 +25,8 @@
             <small class="text-muted">Since start of month</small>
         </div>
     </div>
+
+    @endsection
 
     <div class="card">
         <h3 class="text-primary">Sales Overview (This Year)</h3>
