@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.main')
 
 @section('content')
 
@@ -38,12 +38,11 @@
     const salesChart = new Chart(ctx, {
         type: 'line',
         data: {
-            // You can pass dynamic data from Laravel here using json_encode
             labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
             datasets: [{
                 label: 'Monthly Sales (BDT)',
-                data: [12000, 19000, 3000, 5000, 20000, 30000, 45000, 25000, 35000, 40000, 0, 0], // Example Data
-                borderColor: '#5D8AA8', // Corporate Blue
+                data: [12000, 19000, 3000, 5000, 20000, 30000, 45000, 25000, 35000, 40000, 0, 0],
+                borderColor: '#5D8AA8',
                 backgroundColor: 'rgba(93, 138, 168, 0.2)',
                 borderWidth: 2,
                 fill: true
