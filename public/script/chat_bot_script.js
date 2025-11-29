@@ -1,4 +1,4 @@
-const api_key = "AIzaSyC3k8xlyV6VOz37ajLYpZkIrN9l8j8wHWQ";
+const api_key = "AIzaSyA7sJPMAKwl8W_wdQGa17g3PL-WbC2w2zY";
 
 const chatBox = document.getElementById('chat-box');
 const userInput = document.getElementById('user-input');
