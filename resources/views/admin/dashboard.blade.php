@@ -1,45 +1,35 @@
-<style>
-  body {
-    background-color: #F0F4F8; /* Secondary */
-    color: #2C3E50;          /* Text */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+@extends('layouts.main')
 
-    .card {
-    background-color: #FFFFFF;
-    border-radius: 8px;
-    padding: 24px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-}
+@section('content')
 
-.text-primary { color: #5D8AA8; }
-.text-accent  { color: #E2725B; }
-.text-highlight { color: #88B04B; }
-.text-main    { color: #2C3E50; }
+<div class="container-fluid">
+    <h1 class="text-primary mb-4">Admin Dashboard</h1>
 
-</style>    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-bottom: 30px;">
+        
+        <div class="card" style="border-left: 5px solid #5D8AA8;">
+            <h3 class="text-main">Appointments</h3>
+            <p>Today: </p>
+            <p>Upcoming: </p>
+        </div>
 
-<body>
-<h1 class="text-primary">Admin Dashboard</h1>
+        <div class="card" style="border-left: 5px solid #88B04B;">
+            <h3 class="text-main">Sales Revenue</h3>
+            <p>Today: </p>
+            <p>This Month: </p>
+        </div>
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+        <div class="card" style="border-left: 5px solid #E2725B;">
+            <h3 class="text-main">Growth</h3>
+            <p>New Customers: </p>
+            <small class="text-muted">Since start of month</small>
+        </div>
+    </div>
 
-    <div class='card'>
-        <h3 class='text-main'>Appointments</h3>
-        <p>Bookings Today: </p>
-        <p>Upcoming Confrimed: </p>
+    <div class="card">
+        <h3 class="text-primary">Sales Overview (This Year)</h3>
+        <canvas id="salesChart" height="100"></canvas>
+    </div>
 </div>
 
-<div class='card'>
-    <h3 class='text-main'>Sales</h3>
-    <p>Today's Sales: <strong class='text-highlight'>BDT</strong> </p>
-    <p>This Month's Sales: <strong class='text-highlight'>BDT</strong> </p>
-</div>
-
-<div class='card'>
-    <h3 class='text-main'>Customer Data</h3>
-    <p>Total Customers: </p>
-    <p>New Customers This Month: </p>
-</div>
-</body>
+@endsection
