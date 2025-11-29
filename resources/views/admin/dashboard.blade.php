@@ -1,6 +1,4 @@
-@extends('layouts.main')
 
-@section('content')
 
 <div class="container-fluid">
     <h1 class="text-primary mb-4">Admin Dashboard</h1>
@@ -32,4 +30,4 @@
     </div>
 </div>
 
-@endsection
+

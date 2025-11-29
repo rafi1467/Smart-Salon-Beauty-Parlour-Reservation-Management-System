@@ -1,6 +1,4 @@
-@extends('layouts.main')
 
-@section('content')
 <style>
     body {
         background-color: #F0F4F8;
@@ -137,6 +135,6 @@
         
     </div>
 </div>
-@endsection
+
 
 
