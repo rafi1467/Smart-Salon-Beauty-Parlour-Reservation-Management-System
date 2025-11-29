@@ -109,8 +109,8 @@
     </div>
 
     <div id="booking-list" class="booking-list">
-        @forelse ($pendingBookings as $booking)
-            <div class="card booking-card" id="booking-card-{{ $booking->id }}">
+       )
+            <div class="card booking-card" >
                 <div class="booking-info">
 
                     <div>
@@ -130,11 +130,11 @@
                     </div>
                 </div>
             </div>
-        @empty
+       
             <div class="card">
                 <p class="text-main" style="text-align: center;">No pending bookings found.</p>
             </div>
-        @endforelse
+        
     </div>
 </div>
 @endsection
