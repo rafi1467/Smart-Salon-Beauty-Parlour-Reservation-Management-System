@@ -9,7 +9,7 @@
         
         <div class="card" style="border-left: 5px solid #5D8AA8;">
             <h3 class="text-main">Appointments</h3>
-            <p>Today: <strong class="text-primary" style="font-size: 1.2em;">{{ $todaysBookings }}</strong></p>
+            <p>Today: </p>
             <p>Upcoming: </p>
         </div>
 
@@ -21,7 +21,7 @@
 
         <div class="card" style="border-left: 5px solid #E2725B;">
             <h3 class="text-main">Growth</h3>
-            <p>New Customers: <strong class="text-accent" style="font-size: 1.2em;">+{{ $newCustomers }}</strong></p>
+            <p>New Customers: </p>
             <small class="text-muted">Since start of month</small>
         </div>
     </div>
