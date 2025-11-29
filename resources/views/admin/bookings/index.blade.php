@@ -109,32 +109,32 @@
     </div>
 
     <div id="booking-list" class="booking-list">
-        @forelse ($pendingBookings as $booking)
-            <div class="card booking-card" id="booking-card-{{ $booking->id }}">
+       )
+            <div class="card booking-card" >
                 <div class="booking-info">
 
                     <div>
-                        <h3 class="text-main" style="margin: 0;">{{ $booking->service->name }}</h3>
-                        <p style="margin: 5px 0;"><strong>Customer:</strong> <span class="customer-name">{{ $booking->user->name }}</span></p>
-                        <p style="margin: 5px 0;"><strong>Date:</strong> {{ $booking->date_time->format('d M Y, h:i A') }}</p>
-                        <p style="margin: 5px 0;"><strong>Status:</strong> <span id="status-text-{{ $booking->id }}" class="text-primary status-text">PENDING</span></p>
+                        <h3 class="text-main" style="margin: 0;"></h3>
+                        <p style="margin: 5px 0;"><strong>Customer:</strong> </p>
+                        <p style="margin: 5px 0;"><strong>Date:</p>
+                        <p style="margin: 5px 0;"><strong>Status:</strong> </p>
                     </div>
 
-                    <div id="action-buttons-{{ $booking->id }}" class="action-buttons">
-                        <button class="btn btn-success" onclick="updateStatus({{ $booking->id }}, 'approve', this)">
+                    <div id="action-buttons" class="action-buttons">
+                        <button class="btn btn-success" >
                             Approve
                         </button>
-                        <button class="btn btn-danger" onclick="updateStatus({{ $booking->id }}, 'reject', this)">
+                        <button class="btn btn-danger">
                             Reject
                         </button>
                     </div>
                 </div>
             </div>
-        @empty
+       
             <div class="card">
                 <p class="text-main" style="text-align: center;">No pending bookings found.</p>
             </div>
-        @endforelse
+        
     </div>
 </div>
 @endsection
