@@ -2,14 +2,34 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+<<<<<<< HEAD
+use App\Http\Controllers\BookingController;
 
+/*
+|--------------------------------------------------------------------------
+| Public pages
+|--------------------------------------------------------------------------
+*/
+=======
+>>>>>>> 525e705abfd93eafacfc98074418682415e0e1ad
+
+// Home page (the nice “Welcome to Smart Salon”)
 Route::get('/', function () {
+<<<<<<< HEAD
+    return view('home');   // resources/views/home.blade.php
+})->name('home');
+
+// Optional services page if you have one
+Route::view('/services', 'services')->name('services');
+
+=======
     $featured_services = \App\Models\Service::take(4)->get();
     $reviews = \App\Models\Review::with('user')->orderBy('rating', 'desc')->take(3)->get();
     $branches = \App\Models\Branch::all();
     
     return view('home', compact('featured_services', 'reviews', 'branches'));
 });
+>>>>>>> 525e705abfd93eafacfc98074418682415e0e1ad
 
 Route::get('/dashboard', function () {
     $recent_appointments = \App\Models\Appointment::where('user_id', Auth::id())
@@ -108,6 +128,15 @@ require __DIR__.'/auth.php';
 =======
 /*
 |--------------------------------------------------------------------------
+<<<<<<< HEAD
+| Booking routes
+|--------------------------------------------------------------------------
+*/
+
+Route::prefix('bookings')->name('bookings.')->group(function () {
+    // Booking history list
+    Route::get('/', [BookingController::class, 'index'])->name('index');
+=======
 | Bookings Routes
 |--------------------------------------------------------------------------
 */
@@ -115,13 +144,23 @@ require __DIR__.'/auth.php';
 
 Route::get('/bookings', [BookingController::class, 'index'])
     ->name('bookings.index');
+>>>>>>> 525e705abfd93eafacfc98074418682415e0e1ad
 
-Route::get('/bookings/{booking}', [BookingController::class, 'show'])
-    ->name('bookings.show');
+    // (If you have a booking form)
+    Route::get('/create', [BookingController::class, 'create'])->name('create');
+    Route::post('/', [BookingController::class, 'store'])->name('store');
 
-Route::get('/bookings/{booking}/invoice', [BookingController::class, 'invoice'])
-    ->name('bookings.invoice');
+    // Booking confirmation / details
+    Route::get('/{booking}', [BookingController::class, 'show'])->name('show');
 
+<<<<<<< HEAD
+    // Invoice
+    Route::get('/{booking}/invoice', [BookingController::class, 'invoice'])->name('invoice');
+
+    // Cancel booking
+    Route::post('/{booking}/cancel', [BookingController::class, 'cancel'])->name('cancel');
+});
+=======
 Route::post('/bookings/{booking}/cancel', [BookingController::class, 'cancel'])
     ->name('bookings.cancel');
 
@@ -150,3 +189,4 @@ Route::post('/cancel', [SslCommerzPaymentController::class, 'cancel']);
 Route::post('/ipn', [SslCommerzPaymentController::class, 'ipn']);
 //SSLCOMMERZ END
 >>>>>>> 2150c0b1759584cbf2de850b8a20d5463986771f
+>>>>>>> 525e705abfd93eafacfc98074418682415e0e1ad
