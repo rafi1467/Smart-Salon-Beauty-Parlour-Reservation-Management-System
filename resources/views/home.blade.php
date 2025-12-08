@@ -11,7 +11,7 @@
                 Reveal Your Inner <br> <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-500">Radiance & Style</span>
             </h1>
             <p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
-                Book top-tier salon services with ease. From haircuts to spa treatments, redefine your beauty journey with Smart Salon.
+                Book top-tier salon services with ease. From haircuts to spa treatments, redefine your beauty journey with SmartV.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
                 <a href="{{ route('register') }}" class="px-8 py-4 bg-gray-900 text-white rounded-full font-bold text-lg hover:bg-gray-800 transition transform hover:scale-105 shadow-xl">
@@ -73,7 +73,7 @@
         <div class="container mx-auto px-6 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div>
-                     <span class="text-purple-400 font-bold tracking-wider uppercase text-sm mb-2 block">Why Choose Smart Salon?</span>
+                     <span class="text-purple-400 font-bold tracking-wider uppercase text-sm mb-2 block">Why Choose SmartV?</span>
                     <h2 class="text-3xl md:text-5xl font-bold mb-6">Excellence in Every Detail</h2>
                     <p class="text-gray-400 text-lg mb-8">
                         We combine expert stylists, premium products, and a relaxing atmosphere to deliver a salon experience like no other.
