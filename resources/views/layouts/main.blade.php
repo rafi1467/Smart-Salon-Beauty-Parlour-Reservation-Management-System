@@ -6,6 +6,7 @@
     <title>SmartV - Book Your Perfect Style</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/images/WhatsApp_Image_2025-11-17_at_00.14.30-removebg-preview.png"/>
     <style>
         .bg-primary { background-color: #5D8AA8; }
         .bg-secondary { background-color: #F0F4F8; }
@@ -32,33 +33,34 @@
         .testimonial-card {
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
+        #chatbot-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 80px;
+            height: 80px;
+            z-index: 1000;
+        }
     </style>
 </head>
 <body class="bg-secondary">
     <!-- Navigation -->
-    <nav class="bg-white shadow-lg sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="flex justify-between items-center py-4">
-                <a href="/" class="text-2xl font-bold text-primary flex items-center">
-                    <i class="fas fa-scissors mr-2"></i>SmartV
-                </a>
-                <div class="hidden md:flex items-center space-x-6">
-                    <a href="/" class="text-text font-medium hover:text-accent transition-colors">Home</a>
-                    <a href="/services" class="text-text font-medium hover:text-accent transition-colors">Services</a>
-                    <a href="/stylists" class="text-text font-medium hover:text-accent transition-colors">Our Stylists</a>
-                    <a href="/about" class="text-text font-medium hover:text-accent transition-colors">About Us</a>
-                    <a href="/contact" class="text-text font-medium hover:text-accent transition-colors">Contact</a>
-                </div>
-                <div class="flex items-center space-x-4">
-                    <a href="/login" class="text-text hover:text-accent transition-colors">Login</a>
-                    <a href="/register" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition-colors font-medium">Register</a>
-                    <button class="md:hidden text-text">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </nav>
+    @include('partials.header')
+
+    <!-- Main Content Section -->
+     
+    <main>
+        <div id="chatbot-container">
+            <a href="chat-bot">
+                <img src="/images/c8c893c39689c135fc22ce83be448843_1763439606-removebg-preview.png" alt="">
+            </a>
+
+        </div>    
+
+        @yield('content')
+        
+
+    </main>
 
     <!-- Hero Section -->
     <section class="hero-bg text-white py-20 md:py-32">
@@ -68,7 +70,7 @@
                 Discover the future of beauty with our AI-powered salon experience. Book appointments, get personalized recommendations, and look your best.
             </p>
             <div class="flex flex-col md:flex-row justify-center gap-4">
-                <a href="/services" class="bg-accent text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-opacity-90 transition-colors inline-block">
+                <a href="/appointment/book" class="bg-accent text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-opacity-90 transition-colors inline-block">
                     <i class="fas fa-calendar-alt mr-2"></i>Book Appointment
                 </a>
                 <a href="/stylists" class="bg-white text-primary px-8 py-4 rounded-lg text-lg font-semibold hover:bg-opacity-90 transition-colors inline-block">
@@ -132,7 +134,7 @@
                         <p class="text-gray-600 mb-4">Professional haircut with modern styling techniques.</p>
                         <div class="flex justify-between items-center">
                             <span class="text-primary font-bold text-lg">$35+</span>
-                            <a href="/services" class="text-accent font-medium">Book Now</a>
+                            <a href="/booking" class="text-accent font-medium">Book Now</a>
                         </div>
                     </div>
                 </div>

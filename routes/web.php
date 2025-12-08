@@ -75,10 +75,16 @@ Route::get('/services', function () {
     return view('services', compact('services'));
 })->name('services.index');
 
+<<<<<<< HEAD
 Route::get('/about', function () {
     $branches = \App\Models\Branch::all();
     return view('about', compact('branches'));
 })->name('about');
+=======
+Route::get('/appointment/book', function () {
+    return view('appointment.book');
+});
+>>>>>>> 2150c0b1759584cbf2de850b8a20d5463986771f
 
 Route::get('/contact', function () {
     return view('contact');
@@ -97,4 +103,50 @@ Route::middleware(['auth', 'role:admin'])->prefix('admin')->name('admin.')->grou
     Route::resource('invoices', \App\Http\Controllers\Admin\InvoiceController::class)->only(['create', 'store', 'show']);
 });
 
+<<<<<<< HEAD
 require __DIR__.'/auth.php';
+=======
+/*
+|--------------------------------------------------------------------------
+| Bookings Routes
+|--------------------------------------------------------------------------
+*/
+
+
+Route::get('/bookings', [BookingController::class, 'index'])
+    ->name('bookings.index');
+
+Route::get('/bookings/{booking}', [BookingController::class, 'show'])
+    ->name('bookings.show');
+
+Route::get('/bookings/{booking}/invoice', [BookingController::class, 'invoice'])
+    ->name('bookings.invoice');
+
+Route::post('/bookings/{booking}/cancel', [BookingController::class, 'cancel'])
+    ->name('bookings.cancel');
+
+/*
+|--------------------------------------------------------------------------
+| Payment Routes
+|--------------------------------------------------------------------------
+*/
+use App\Http\Controllers\SslCommerzPaymentController;
+
+Route::get('/payment', function () {
+    return view('sslpaymentgatway.exampleEasycheckout');
+});
+
+// SSLCOMMERZ Start
+Route::get('/checkout', [SslCommerzPaymentController::class, 'exampleEasyCheckout']);
+Route::get('/example2', [SslCommerzPaymentController::class, 'exampleHostedCheckout']);
+
+Route::post('/pay', [SslCommerzPaymentController::class, 'index']);
+Route::post('/pay-via-ajax', [SslCommerzPaymentController::class, 'payViaAjax']);
+
+Route::post('/success', [SslCommerzPaymentController::class, 'success']);
+Route::post('/fail', [SslCommerzPaymentController::class, 'fail']);
+Route::post('/cancel', [SslCommerzPaymentController::class, 'cancel']);
+
+Route::post('/ipn', [SslCommerzPaymentController::class, 'ipn']);
+//SSLCOMMERZ END
+>>>>>>> 2150c0b1759584cbf2de850b8a20d5463986771f
