@@ -5,28 +5,39 @@ use App\Http\Controllers\BookingController;
 
 /*
 |--------------------------------------------------------------------------
-| Home Page
+| Public pages
 |--------------------------------------------------------------------------
 */
 
+// Home page (the nice “Welcome to Smart Salon”)
 Route::get('/', function () {
-    return redirect()->route('bookings.index');
-});
+    return view('home');   // resources/views/home.blade.php
+})->name('home');
+
+// Optional services page if you have one
+Route::view('/services', 'services')->name('services');
+
 
 /*
 |--------------------------------------------------------------------------
-| Booking Routes
+| Booking routes
 |--------------------------------------------------------------------------
 */
 
-Route::get('/bookings', [BookingController::class, 'index'])
-    ->name('bookings.index');
+Route::prefix('bookings')->name('bookings.')->group(function () {
+    // Booking history list
+    Route::get('/', [BookingController::class, 'index'])->name('index');
 
-Route::get('/bookings/{booking}', [BookingController::class, 'show'])
-    ->name('bookings.show');
+    // (If you have a booking form)
+    Route::get('/create', [BookingController::class, 'create'])->name('create');
+    Route::post('/', [BookingController::class, 'store'])->name('store');
 
-Route::get('/bookings/{booking}/invoice', [BookingController::class, 'invoice'])
-    ->name('bookings.invoice');
+    // Booking confirmation / details
+    Route::get('/{booking}', [BookingController::class, 'show'])->name('show');
 
-Route::post('/bookings/{booking}/cancel', [BookingController::class, 'cancel'])
-    ->name('bookings.cancel');
+    // Invoice
+    Route::get('/{booking}/invoice', [BookingController::class, 'invoice'])->name('invoice');
+
+    // Cancel booking
+    Route::post('/{booking}/cancel', [BookingController::class, 'cancel'])->name('cancel');
+});
