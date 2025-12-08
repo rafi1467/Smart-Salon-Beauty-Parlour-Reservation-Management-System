@@ -13,8 +13,8 @@
             <h1>StyleV Chatbot</h1>
         </header>
         <div id="chat-box" class = "chat-box">
-            <div class ="message user-message">Hi</div>
-            <div class ="message bot-message">Hi</div>
+            <!-- <div class ="message user-message">Hi</div> -->
+            <div class ="message bot-message">Hi I am you AI assistent. What can I do for you?</div>
         </div>
         <div class="input-area">
             <input type="text" id="user-input" placeholder="Type your message here...">
