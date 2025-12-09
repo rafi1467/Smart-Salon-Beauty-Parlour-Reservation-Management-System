@@ -43,6 +43,7 @@
             </div>
         </div>
     </div>
+
     <!-- Toggle Button (FAB) -->
     <button @click="open = !open" class="group flex items-center justify-center focus:outline-none transform hover:scale-110 transition duration-300 z-50">
         <img x-show="!open" src="{{ asset('images/c8c893c39689c135fc22ce83be448843_1763439606-removebg-preview.png') }}" class="w-20 h-20 drop-shadow-2xl animate-wiggle" alt="Chatbot">
@@ -51,7 +52,7 @@
             <span class="text-xl text-white font-bold">✕</span>
         </div>
     </button>
-<div>
+</div>
 
 <script>
     function handleWidgetEnter(e) {
