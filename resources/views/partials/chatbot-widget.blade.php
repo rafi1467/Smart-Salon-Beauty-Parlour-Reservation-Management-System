@@ -43,6 +43,7 @@
             </div>
         </div>
     </div>
+
     <!-- Toggle Button (FAB) -->
     <button @click="open = !open" class="group flex items-center justify-center focus:outline-none transform hover:scale-110 transition duration-300 z-50">
         <img x-show="!open" src="{{ asset('images/c8c893c39689c135fc22ce83be448843_1763439606-removebg-preview.png') }}" class="w-20 h-20 drop-shadow-2xl animate-wiggle" alt="Chatbot">
@@ -51,5 +52,58 @@
             <span class="text-xl text-white font-bold">✕</span>
         </div>
     </button>
-<div>
+</div>
 
+<script>
+    function handleWidgetEnter(e) {
+        if (e.key === 'Enter') sendWidgetMessage();
+    }
+
+    async function sendWidgetMessage() {
+        const input = document.getElementById('widget-user-input');
+        const box = document.getElementById('widget-chat-box');
+        const message = input.value.trim();
+        if (!message) return;
+
+        // User Message
+        const userDiv = document.createElement('div');
+        userDiv.className = 'flex items-end justify-end';
+        userDiv.innerHTML = `<div class="bg-purple-100 text-purple-900 rounded-lg rounded-tr-none p-3 max-w-[85%] text-sm shadow-sm">${message}</div>`;
+        box.appendChild(userDiv);
+        box.scrollTop = box.scrollHeight;
+        input.value = '';
+
+        // Loading
+        const loadingId = 'widget-loading-' + Date.now();
+        const loadingDiv = document.createElement('div');
+        loadingDiv.id = loadingId;
+        loadingDiv.className = 'flex items-start';
+        loadingDiv.innerHTML = `<div class="bg-gray-200 text-gray-500 rounded-lg rounded-tl-none p-3 text-xs italic shadow-sm">Thinking...</div>`;
+        box.appendChild(loadingDiv);
+        box.scrollTop = box.scrollHeight;
+
+        try {
+            const response = await fetch("{{ route('ai.message') }}", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRF-TOKEN': "{{ csrf_token() }}"
+                },
+                body: JSON.stringify({ message: message })
+            });
+            const data = await response.json();
+            document.getElementById(loadingId).remove();
+
+            const aiDiv = document.createElement('div');
+            aiDiv.className = 'flex items-start';
+            const cleanText = (data.response || "Error").replace(/\*\*(.*?)\*\*/g, '<b>$1</b>').replace(/\n/g, '<br>');
+            aiDiv.innerHTML = `<div class="bg-blue-100 text-blue-900 rounded-lg rounded-tl-none p-3 max-w-[85%] text-sm shadow-sm">${cleanText}</div>`;
+            box.appendChild(aiDiv);
+            box.scrollTop = box.scrollHeight;
+
+        } catch (error) {
+            document.getElementById(loadingId).remove();
+            console.error(error);
+        }
+    }
+</script>
