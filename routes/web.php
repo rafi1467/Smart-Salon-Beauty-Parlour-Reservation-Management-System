@@ -2,34 +2,14 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-<<<<<<< HEAD
-use App\Http\Controllers\BookingController;
 
-/*
-|--------------------------------------------------------------------------
-| Public pages
-|--------------------------------------------------------------------------
-*/
-=======
->>>>>>> 525e705abfd93eafacfc98074418682415e0e1ad
-
-// Home page (the nice “Welcome to Smart Salon”)
 Route::get('/', function () {
-<<<<<<< HEAD
-    return view('home');   // resources/views/home.blade.php
-})->name('home');
-
-// Optional services page if you have one
-Route::view('/services', 'services')->name('services');
-
-=======
     $featured_services = \App\Models\Service::take(4)->get();
     $reviews = \App\Models\Review::with('user')->orderBy('rating', 'desc')->take(3)->get();
     $branches = \App\Models\Branch::all();
     
     return view('home', compact('featured_services', 'reviews', 'branches'));
 });
->>>>>>> 525e705abfd93eafacfc98074418682415e0e1ad
 
 Route::get('/dashboard', function () {
     $recent_appointments = \App\Models\Appointment::where('user_id', Auth::id())
@@ -95,16 +75,10 @@ Route::get('/services', function () {
     return view('services', compact('services'));
 })->name('services.index');
 
-<<<<<<< HEAD
 Route::get('/about', function () {
     $branches = \App\Models\Branch::all();
     return view('about', compact('branches'));
 })->name('about');
-=======
-Route::get('/appointment/book', function () {
-    return view('appointment.book');
-});
->>>>>>> 2150c0b1759584cbf2de850b8a20d5463986771f
 
 Route::get('/contact', function () {
     return view('contact');
@@ -123,70 +97,4 @@ Route::middleware(['auth', 'role:admin'])->prefix('admin')->name('admin.')->grou
     Route::resource('invoices', \App\Http\Controllers\Admin\InvoiceController::class)->only(['create', 'store', 'show']);
 });
 
-<<<<<<< HEAD
 require __DIR__.'/auth.php';
-=======
-/*
-|--------------------------------------------------------------------------
-<<<<<<< HEAD
-| Booking routes
-|--------------------------------------------------------------------------
-*/
-
-Route::prefix('bookings')->name('bookings.')->group(function () {
-    // Booking history list
-    Route::get('/', [BookingController::class, 'index'])->name('index');
-=======
-| Bookings Routes
-|--------------------------------------------------------------------------
-*/
-
-
-Route::get('/bookings', [BookingController::class, 'index'])
-    ->name('bookings.index');
->>>>>>> 525e705abfd93eafacfc98074418682415e0e1ad
-
-    // (If you have a booking form)
-    Route::get('/create', [BookingController::class, 'create'])->name('create');
-    Route::post('/', [BookingController::class, 'store'])->name('store');
-
-    // Booking confirmation / details
-    Route::get('/{booking}', [BookingController::class, 'show'])->name('show');
-
-<<<<<<< HEAD
-    // Invoice
-    Route::get('/{booking}/invoice', [BookingController::class, 'invoice'])->name('invoice');
-
-    // Cancel booking
-    Route::post('/{booking}/cancel', [BookingController::class, 'cancel'])->name('cancel');
-});
-=======
-Route::post('/bookings/{booking}/cancel', [BookingController::class, 'cancel'])
-    ->name('bookings.cancel');
-
-/*
-|--------------------------------------------------------------------------
-| Payment Routes
-|--------------------------------------------------------------------------
-*/
-use App\Http\Controllers\SslCommerzPaymentController;
-
-Route::get('/payment', function () {
-    return view('sslpaymentgatway.exampleEasycheckout');
-});
-
-// SSLCOMMERZ Start
-Route::get('/checkout', [SslCommerzPaymentController::class, 'exampleEasyCheckout']);
-Route::get('/example2', [SslCommerzPaymentController::class, 'exampleHostedCheckout']);
-
-Route::post('/pay', [SslCommerzPaymentController::class, 'index']);
-Route::post('/pay-via-ajax', [SslCommerzPaymentController::class, 'payViaAjax']);
-
-Route::post('/success', [SslCommerzPaymentController::class, 'success']);
-Route::post('/fail', [SslCommerzPaymentController::class, 'fail']);
-Route::post('/cancel', [SslCommerzPaymentController::class, 'cancel']);
-
-Route::post('/ipn', [SslCommerzPaymentController::class, 'ipn']);
-//SSLCOMMERZ END
->>>>>>> 2150c0b1759584cbf2de850b8a20d5463986771f
->>>>>>> 525e705abfd93eafacfc98074418682415e0e1ad
