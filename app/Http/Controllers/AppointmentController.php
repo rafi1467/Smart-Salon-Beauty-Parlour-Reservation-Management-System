@@ -25,7 +25,7 @@ class AppointmentController extends Controller
             ->with(['service', 'staff'])
             ->orderBy('start_time', 'desc')
             ->get();
-
+            
         return view('appointments.index', compact('appointments'));
     }
 
@@ -39,11 +39,11 @@ class AppointmentController extends Controller
     {
         // FR-04: Fetch all branches for selection
         $branches = \App\Models\Branch::all();
-
+        
         // Data for dropdowns (filtered dynamically on frontend)
         $services = Service::all();
         $staff = Staff::where('is_active', true)->get();
-
+        
         return view('appointments.create', compact('branches', 'services', 'staff'));
     }
 
@@ -66,7 +66,7 @@ class AppointmentController extends Controller
         ]);
 
         $service = Service::findOrFail($request->service_id);
-
+        
         // 2. Calculate Start & End Time
         $start_time = Carbon::parse($request->appointment_date . ' ' . $request->appointment_time);
         $end_time = $start_time->copy()->addMinutes($service->duration_minutes);
@@ -76,11 +76,11 @@ class AppointmentController extends Controller
         $conflicts = Appointment::where('staff_id', $request->staff_id)
             ->where(function ($query) use ($start_time, $end_time) {
                 $query->whereBetween('start_time', [$start_time, $end_time])
-                    ->orWhereBetween('end_time', [$start_time, $end_time])
-                    ->orWhere(function ($q) use ($start_time, $end_time) {
-                        $q->where('start_time', '<', $start_time)
+                      ->orWhereBetween('end_time', [$start_time, $end_time])
+                      ->orWhere(function ($q) use ($start_time, $end_time) {
+                          $q->where('start_time', '<', $start_time)
                             ->where('end_time', '>', $end_time);
-                    });
+                      });
             })
             ->where('status', '!=', 'cancelled')
             ->exists();
@@ -97,7 +97,7 @@ class AppointmentController extends Controller
             $user = Auth::user();
             $available_points = $user->loyalty_points;
             $points_to_redeem = (int) $request->redeem_points;
-
+            
             // Get redemption rate
             $redeemValue = \App\Models\Setting::getValue('loyalty_redeem_value', 10);
 
@@ -115,7 +115,7 @@ class AppointmentController extends Controller
                 // Adjust points used to match service price exactly if they tried to overpay
                 // Points needed = Price / Value
                 $points_to_redeem = ceil($service_price / $redeemValue);
-                $potential_discount = $points_to_redeem * $redeemValue;
+                $potential_discount = $points_to_redeem * $redeemValue; 
                 // Wait, if ceil gives more value than price, we limit discount amount to price
                 // But we still deduct the calculated points. 
                 // Actually safer to cap discount amount.
@@ -123,17 +123,17 @@ class AppointmentController extends Controller
             } else {
                 $discount_amount = $potential_discount;
             }
-
+            
             $points_redeemed = $points_to_redeem;
 
             // Deduct points
             $user->decrement('loyalty_points', $points_redeemed);
-
+            
             // Log Transaction
             $user->loyaltyTransactions()->create([
                 'points' => -$points_redeemed,
                 'type' => 'redeemed',
-                'description' => 'Redeemed for appointment #' . (Appointment::max('id') + 1),
+                'description' => 'Redeemed for appointment #' . (Appointment::max('id') + 1), 
             ]);
         }
 
@@ -224,7 +224,7 @@ class AppointmentController extends Controller
         ]);
 
         $service = $appointment->service; // Service usually stays the same for reschedule
-
+        
         // Calculate new times
         $start_time = Carbon::parse($request->appointment_date . ' ' . $request->appointment_time);
         $end_time = $start_time->copy()->addMinutes($service->duration_minutes);
@@ -234,11 +234,11 @@ class AppointmentController extends Controller
             ->where('id', '!=', $appointment->id)
             ->where(function ($query) use ($start_time, $end_time) {
                 $query->whereBetween('start_time', [$start_time, $end_time])
-                    ->orWhereBetween('end_time', [$start_time, $end_time])
-                    ->orWhere(function ($q) use ($start_time, $end_time) {
-                        $q->where('start_time', '<', $start_time)
+                      ->orWhereBetween('end_time', [$start_time, $end_time])
+                      ->orWhere(function ($q) use ($start_time, $end_time) {
+                          $q->where('start_time', '<', $start_time)
                             ->where('end_time', '>', $end_time);
-                    });
+                      });
             })
             ->where('status', '!=', 'cancelled')
             ->exists();

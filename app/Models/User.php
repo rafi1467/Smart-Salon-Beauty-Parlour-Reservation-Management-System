@@ -20,8 +20,16 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'phone', // Added phone
+        'role',  // Added role
+        'loyalty_points', // Added loyalty points
         'password',
     ];
+
+    public function loyaltyTransactions()
+    {
+        return $this->hasMany(\App\Models\LoyaltyTransaction::class);
+    }
 
     /**
      * The attributes that should be hidden for serialization.

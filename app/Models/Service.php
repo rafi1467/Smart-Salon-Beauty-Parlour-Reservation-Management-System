@@ -2,20 +2,24 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Service extends Model
 {
-    use HasFactory;
+    protected $fillable = ['title', 'description', 'price', 'duration_minutes', 'is_active', 'image', 'branch_id'];
 
-    protected $fillable = [
-        'name', 'description', 'price', 'duration', 'category', 'is_available'
-    ];
-
-    // Scope for available services
-    public function scopeAvailable($query)
+    public function appointments()
     {
-        return $query->where('is_available', true);
+        return $this->hasMany(Appointment::class);
+    }
+
+    public function branch()
+    {
+        return $this->belongsTo(Branch::class);
+    }
+
+    public function reviews()
+    {
+        return $this->hasMany(Review::class);
     }
 }

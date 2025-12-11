@@ -11,12 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('counters', function (Blueprint $table) {
-            $table->id();
-            $table->string('key')->unique();
-            $table->string('prefix');
-            $table->string('value');
-            $table->timestamps();
+        Schema::table('users', function (Blueprint $table) {
+            $table->enum('role', ['admin', 'customer'])->default('customer')->after('email');
+            $table->string('phone')->nullable()->after('role');
         });
     }
 
@@ -25,6 +22,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('counters');
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropColumn(['role', 'phone']);
+        });
     }
 };

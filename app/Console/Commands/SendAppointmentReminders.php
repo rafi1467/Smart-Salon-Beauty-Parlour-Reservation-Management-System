@@ -29,10 +29,10 @@ class SendAppointmentReminders extends Command
         // Let's say we want to remind exactly 24h before, or roughly for the next day.
         // Simple strategy: Specific time window tomorrow.
         // Better: Pending/Confirmed appointments start_time between now+23h and now+25h that haven't been reminded.
-
+        
         $startWindow = \Carbon\Carbon::now()->addHours(23);
         $endWindow = \Carbon\Carbon::now()->addHours(25);
-
+        
         $appointments = \App\Models\Appointment::with('user', 'service')
             ->whereIn('status', ['pending', 'confirmed'])
             ->whereNull('reminded_at')
