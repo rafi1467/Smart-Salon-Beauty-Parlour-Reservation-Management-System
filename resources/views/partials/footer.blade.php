@@ -4,7 +4,7 @@
     <div class="max-w-6xl mx-auto px-4">
         <div class="flex flex-col md:flex-row justify-between items-center">
             <div class="mb-4 md:mb-0">
-                <span class="font-bold text-lg">Smart Salon</span>
+                <span class="font-bold text-lg">SmartV</span>
                 <p class="text-sm mt-1">Your beauty, our duty.</p>
             </div>
             <div class="flex space-x-4">
@@ -13,7 +13,7 @@
             </div>
         </div>
         <div class="text-center mt-4 text-gray-500 text-sm">
-            &copy; {{ date('Y') }} Smart Salon. All rights reserved.
+            &copy; {{ date('Y') }} SmartV. All rights reserved.
         </div>
     </div>
 </footer>

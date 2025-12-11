@@ -17,7 +17,7 @@
             <div class="bg-white p-6 rounded shadow">
                 <h3 class="text-xl font-bold mb-2">Contact Info</h3>
                 <p>Phone: +880 1234 567890</p>
-                <p>Email: info@smartsalon.com</p>
+                <p>Email: info@smartv.com</p>
             </div>
         </div>
     </div>
