@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ config('app.name', 'Smart Salon') }}</title>
+    <title>{{ config('app.name', 'SmartV') }}</title>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +23,7 @@
             <div class="flex justify-between h-20 items-center">
                 <div class="flex-shrink-0 flex items-center">
                     <a href="{{ url('/') }}" class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">
-                        SmartSalon
+                        SmartV
                     </a>
                 </div>
                 <!-- Desktop Menu -->
@@ -78,7 +78,7 @@
                 <!-- Brand -->
                 <div class="col-span-1 md:col-span-1">
                     <a href="{{ url('/') }}" class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600 mb-6 inline-block">
-                        SmartSalon
+                        SmartV
                     </a>
                     <p class="text-gray-500 text-sm leading-relaxed mb-6">
                         Revolutionizing the salon experience with smart technology and premium care.
@@ -120,7 +120,7 @@
             </div>
             
             <div class="border-t border-gray-100 pt-8 text-center">
-                <p class="text-gray-400 text-sm">&copy; {{ date('Y') }} Smart Salon. All rights reserved.</p>
+                <p class="text-gray-400 text-sm">&copy; {{ date('Y') }} SmartV. All rights reserved.</p>
             </div>
         </div>
     </footer>

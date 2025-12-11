@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ config('app.name', 'Smart Salon') }}</title>
+    <title>{{ config('app.name', 'SmartV') }}</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,7 +22,7 @@
                 <div>
                     <!-- Website Logo -->
                     <a href="{{ url('/') }}" class="flex items-center py-4 px-2">
-                        <span class="font-semibold text-gray-500 text-lg">Smart Salon</span>
+                        <span class="font-semibold text-gray-500 text-lg">SmartV</span>
                     </a>
                 </div>
                 <div class="hidden md:flex items-center space-x-1">
