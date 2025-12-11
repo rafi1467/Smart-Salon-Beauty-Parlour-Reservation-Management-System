@@ -2,7 +2,7 @@
 
 <div class="max-w-4xl mx-auto px-4 py-12">
     <div class="text-center mb-8">
-        <h1 class="text-4xl font-bold text-gray-800">Smart Salon Assistant</h1>
+        <h1 class="text-4xl font-bold text-gray-800">SmartV Assistant</h1>
         <p class="text-gray-600 mt-2">Ask me anything about our services, stylists, or booking availability!</p>
     </div>
 
