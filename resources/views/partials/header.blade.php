@@ -22,7 +22,7 @@
                 <div>
                     <!-- Website Logo -->
                     <a href="{{ url('/') }}" class="flex items-center py-4 px-2">
-                        <span class="font-semibold text-gray-500 text-lg">SmartV</span>
+                        <span class="font-semibold text-gray-500 text-lg">Smart Salon</span>
                     </a>
                 </div>
                 <div class="hidden md:flex items-center space-x-1">
