@@ -10,7 +10,7 @@
         <!-- Name -->
         <div>
             <x-input-label for="name" :value="__('Full Name')" class="text-gray-700 font-semibold" />
-            <x-text-input id="name" class="block mt-2 w-full rounded-lg border-gray-200 focus:border-purple-500 focus:ring-purple-500 transition-colors" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" placeholder="John Doe" />
+            <x-text-input id="name" class="block mt-2 w-full rounded-lg border-gray-200 focus:border-purple-500 focus:ring-purple-500 transition-colors" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" placeholder="Enter your full name" />
             <x-input-error :messages="$errors->get('name')" class="mt-2" />
         </div>
 
