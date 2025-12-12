@@ -26,7 +26,7 @@ class AiController extends Controller
         // 1. Gather Context
         $services = Service::all();
         $staff = Staff::where('is_active', true)->get();
-        
+
         $context = "You are the AI assistant for Smart Salon. \n";
         $context .= "We offer these services: \n";
         foreach ($services as $s) {
@@ -42,20 +42,22 @@ class AiController extends Controller
 
         // 2. Call Pollinations.ai (Free, Reliable, No Key Required)
         // Since the user's Gemini Key is leaked/revoked, we switch to this open API.
-        
+
         try {
             // Construct the full prompt
             $fullPrompt = $context . "\nUser: " . $userMessage . "\nAI:";
-            
+
             // Pollinations Text API supports POST for longer prompts
-            $response = Http::withHeaders([
-                'Content-Type' => 'application/json',
-            ])->post('https://text.pollinations.ai/', [
-                'messages' => [
-                    ['role' => 'user', 'content' => $fullPrompt]
-                ],
-                'model' => 'openai' // Uses a smart model (usually GPT-4o-mini or similar)
-            ]);
+            $response = Http::withOptions([
+                'verify' => false,
+            ])->withHeaders([
+                        'Content-Type' => 'application/json',
+                    ])->post('https://text.pollinations.ai/', [
+                        'messages' => [
+                            ['role' => 'user', 'content' => $fullPrompt]
+                        ],
+                        'model' => 'openai' // Uses a smart model (usually GPT-4o-mini or similar)
+                    ]);
 
             if ($response->successful()) {
                 // Pollinations might return raw text or OpenAI format depending on endpoint behavior.
@@ -67,7 +69,7 @@ class AiController extends Controller
                 return response()->json(['response' => "Sorry, I'm having trouble connecting to the brain. Please try again."]);
             }
         } catch (\Exception $e) {
-             return response()->json(['response' => "Error: " . $e->getMessage()]);
+            return response()->json(['response' => "Error: " . $e->getMessage()]);
         }
     }
 }
