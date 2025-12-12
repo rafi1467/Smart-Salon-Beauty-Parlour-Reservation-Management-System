@@ -9,29 +9,20 @@ use App\Models\Service;
 
 class ServiceController extends Controller
 {
-    /**
-     * Display a listing of services.
-     * @fr FR-02: Service Management (List View)
-     */
+   
     public function index()
     {
         $services = Service::all();
         return view('admin.services.index', compact('services'));
     }
 
-    /**
-     * Show the form for creating a new service.
-     * @fr FR-02: Service Management (Create Form)
-     */
+    
     public function create()
     {
         return view('admin.services.create');
     }
 
-    /**
-     * Store a newly created service in storage.
-     * @fr FR-02: Service Management (Store Logic)
-     */
+   
     public function store(Request $request)
     {
         $request->validate([
@@ -55,28 +46,20 @@ class ServiceController extends Controller
         return redirect()->route('admin.services.index')->with('success', 'Service created successfully.');
     }
 
-    /**
-     * Display the specified resource.
-     */
+    
     public function show(string $id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified service.
-     * @fr FR-02: Service Management (Edit Form)
-     */
+   
     public function edit(string $id)
     {
         $service = Service::findOrFail($id);
         return view('admin.services.edit', compact('service'));
     }
 
-    /**
-     * Update the specified service in storage.
-     * @fr FR-02: Service Management (Update Logic)
-     */
+    
     public function update(Request $request, string $id)
     {
         $request->validate([
@@ -105,10 +88,7 @@ class ServiceController extends Controller
         return redirect()->route('admin.services.index')->with('success', 'Service updated successfully.');
     }
 
-    /**
-     * Remove the specified service from storage.
-     * @fr FR-02: Service Management (Delete Logic)
-     */
+   
     public function destroy(string $id)
     {
         $service = Service::findOrFail($id);
